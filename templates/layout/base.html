@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ title }}</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    {% include 'layout/_link_css.html' %}
+    {% block css %} {% endblock %}
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+    <!-- Left side column. contains the logo and sidebar -->
+    {% include 'layout/_header.html' %}
+    {% include 'layout/_left_sitebar.html' %}
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+    {% block content %}{% endblock %}
+    </div>
+    {% include 'layout/_footer.html' %}
+    <div class="control-sidebar-bg"></div>
+</div>
+{% include 'layout/_link_js.html' %}
+{% block js %}{% endblock %}
+</body>
+</html>
