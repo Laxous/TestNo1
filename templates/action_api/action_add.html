@@ -1,0 +1,183 @@
+{% extends 'layout/base.html' %}
+{% block css %}
+    <style>
+        hr {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #selectbox {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            padding: 10px 10px 10px 10px;
+        }
+
+        .box-info {
+            text-align: center;
+            padding-right: 10px
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            添加接口
+            <small>AddAction</small>
+        </h1>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">请填入接口信息</h3>
+                        </div>
+                        <div class="box-body">
+                            <div id="selectbox">
+                                <div class="box-info" style="width: 10%">
+                                    <h5>接口名称</h5>
+                                </div>
+                                <div class="box-info" style="width: 40%">
+                                    <input id="apiname" class="form-control" type="text" style="width: 100%">
+                                </div>
+                            </div>
+                            <div id="selectbox">
+                                <div class="box-info" style="width: 10%">
+                                    <h5>请求地址</h5>
+                                </div>
+                                <div class="box-info" style="width: 40%">
+                                    <input id="apipath" class="form-control" type="text" style="width: 100%">
+                                </div>
+                            </div>
+                            <div id="selectbox">
+                                <div class="box-info" style="width: 10%">
+                                    <h5>请求参数</h5>
+                                </div>
+                                <div class="box-info" style="width: 40%">
+                                    <table id="params_table" class="table table-striped">
+                                        <tbody>
+                                        <tr>
+                                            <th>Key</th>
+                                            <th>Value</th>
+                                            <th style="width: 40px">operate</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input class="form-control" type="text" style="width: 100%">
+                                            </td>
+                                            <td>
+                                                <input class="form-control" type="text" style="width: 100%">
+                                            </td>
+                                            <td class="box-info">
+                                                <input type="button" value="添加" class="btn btn-block btn-info"
+                                                       onclick="addparamsrows()">
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div id="selectbox">
+                                <div class="box-info" style="width: 10%">
+                                    <h5>请求头部</h5>
+                                </div>
+                                <div class="box-info" style="width: 40%">
+                                    <input id="headers" class="form-control" type="text" style="width: 100%">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-info pull-left" onclick="keep_apiinfo()">添加至接口列表
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <!-- Main content -->
+    <section class="content container-fluid">
+    </section>
+    <!-- /.content -->
+{% endblock %}
+{% block js %}
+    <script>
+
+        function getapiparams() {
+            var tb = document.getElementById("params_table");    //获取table对像
+            var rows = tb.rows;
+            var cellArr = {};
+            for (var i = 1; i < rows.length; i++) {    //--循环所有的行
+                var cells = rows[i].cells;
+                var key = cells[0].getElementsByTagName("input")[0].value;
+                var value = cells[1].getElementsByTagName("input")[0].value;
+                cellArr[key] = value;
+            }
+            a = JSON.stringify(cellArr);
+            return a
+        }
+
+        function getapiinfo() {
+            var params = getapiparams();
+            var apiname = document.getElementById("apiname").value;
+            var apipath = document.getElementById("apipath").value;
+            var headers = document.getElementById("headers").value;
+            return {
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                params: params,
+                apiname: apiname,
+                apipath: apipath,
+                headers: headers
+            }
+        }
+
+        function keep_apiinfo() {
+            var json = getapiinfo();
+            $.ajax({
+                url: '/action/send_api/',
+                data: json,
+                cache: false,
+                async: true,
+                type: "POST",
+                dataType: 'json',
+                success: function (json) {
+                    if (json.status == 200) {
+                        window.location.href = '/action/';
+                    } else {
+                        alert(json.message);
+                    }
+                },
+                error: function () {
+                    alert('添加错误');
+                }
+            });
+        }
+
+        function addparamsrows() {
+            //获取最后一行的data-id(标识行)
+            var rowIndex = $("#params_table tr:last").attr("data-row");
+            if (rowIndex == "" || rowIndex == null) {
+                rowIndex = parseInt(1);
+            } else {
+                rowIndex = parseInt(rowIndex) + 1;
+            }
+            var htmlList = '<tr>';
+            //key
+            htmlList += '<td><input class="form-control" type="text" style="width: 100%"></td>';
+            //value
+            htmlList += '<td><input class="form-control" type="text" style="width: 100%"></td>';
+            //操作
+            htmlList += '<td class="box-info"><input type="button" value="添加" class="btn btn-block btn-info" onclick="addparamsrows()">';
+            htmlList += '</td></tr>';
+            //在行最后添加数据
+            $("#params_table tr:last").after(htmlList);
+            htmlList = '';
+        }
+    </script>
+{% endblock %}

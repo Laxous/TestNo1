@@ -24,3 +24,18 @@ class userinfo(models.Model):
 	updated_at = models.DateTimeField(auto_now=True)  # 每次更新都可以更新的时间
 	des=models.TextField(max_length=200,null=True)
 	abanding_flag=models.IntegerField(default=1)  # 整型，默认值为1
+
+class ActionApi(models.Model):
+	"""接口管理页面数据表"""
+	id = models.AutoField(primary_key=True)
+	action_name = models.CharField(max_length=50)
+	api_path = models.CharField(max_length=50)
+	params = models.TextField(max_length=200)
+	headers = models.TextField(max_length=200)
+	abandon_flag = models.IntegerField(default=1) # 1有效 0删除
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
+	created_by = models.CharField(max_length=20)
+	updated_by = models.CharField(max_length=20)
+	descriptions = models.TextField(max_length=200)
+

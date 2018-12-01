@@ -1,0 +1,132 @@
+{% extends 'layout/base.html' %}
+{% block css %}
+    <style>
+        hr {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            主页
+            <small>Optional description</small>
+        </h1>
+    </section>
+    <section class="content">
+        <div class="box">
+            <div class="box-header">
+                <button type="submit" class="btn btn-info pull-left" onclick="window.location.href='/action/add/'">
+                    添加接口
+                </button>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+                <table class="table table-striped" id="api_info">
+                    <tr>
+                        <th style="width: 10px">#</th>
+                        <th>接口名称</th>
+                        <th>接口地址</th>
+                        <th>请求参数</th>
+                        <th>请求头部</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                    {% for info in action_list %}
+                        <tr>
+                            <td>{{ info.id }}</td>
+                            <td>{{ info.action_name }}</td>
+                            <td>{{ info.api_path }}</td>
+                            <td>{{ info.params }}</td>
+                            <td>{{ info.headers }}</td>
+                            <td>{{ info.abandon_flag }}</td>
+                            <td><input type="button" value="查看" class="btn btn-block btn-info btn-xs" id="{{ info.id }}"
+                                       onclick="updateApi(this.id)"></td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </section>
+    <!-- Main content -->
+    <section class="content container-fluid">
+    </section>
+    <!-- /.content -->
+{% endblock %}
+{% block js %}
+    <script>
+        //配置取消按钮
+        function resertEditTd() {
+            location.reload();
+        }
+
+        //修改按钮
+        function updateApi(id) {
+            var b = $('#api_info #' + id).parent();
+            var a = b.siblings();
+            if (a[1].children.length === 0) {
+                a[1].innerHTML = "<input type='text' value='" + a[1].innerText + "'/>";
+            }
+            if (a[2].children.length === 0) {
+                a[2].innerHTML = "<input type='text' value='" + a[2].innerText + "'/>";
+            }
+            if (a[3].children.length === 0) {
+                a[3].innerHTML = "<input type='text' value='" + a[3].innerText + "'/>";
+            }
+            if (a[4].children.length === 0) {
+                a[4].innerHTML = "<input type='text' value='" + a[4].innerText + "'/>";
+            }
+            if (a[5].children.length === 0) {
+                a[5].innerHTML = "<input type='text' value='" + a[5].innerText + "'/>";
+            }
+            b[0].innerHTML = "<input id='" + id + "' style='width: 50%' class='btn btn-block btn-info btn-xs' type='button' onclick='getapiinfo(this.id);' value='保存'/><input style='width: 50%' class='btn btn-block btn-info btn-xs' type='button' onclick='resertEditTd();' value='取消'/>";
+        }
+
+        function getapiinfo(id) {
+            var a = $('#api_info #' + id).parent().siblings(); //td的兄弟节点
+            var apiname = a[1].children[0].value;
+            var apipath = a[2].children[0].value;
+            var params = a[3].children[0].value;
+            var headers = a[4].children[0].value;
+            var status = a[5].children[0].value;
+            json = {
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                id: id,
+                params: params,
+                apiname: apiname,
+                apipath: apipath,
+                headers: headers,
+                status:status
+            };
+            alert(json);
+            keep_apiinfo(json);
+            location.reload();
+        }
+
+        function keep_apiinfo() {
+            $.ajax({
+                url: '/action/updata_api/',
+                data: json,
+                cache: false,
+                async: true,
+                type: "POST",
+                dataType: 'json',
+                success: function (json) {
+                    if (json.status == 200) {
+                        alert("修改成功")
+                    } else {
+                        alert(json.message);
+                    }
+                },
+                error: function () {
+                    alert('添加错误');
+                }
+            });
+        }
+
+    </script>
+{% endblock %}
