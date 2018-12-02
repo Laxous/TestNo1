@@ -18,6 +18,8 @@
     <section class="content">
         <div class="box">
             <div class="box-header">
+                <h4>{{ username }}</h4>
+                <h4>{{ name }}</h4>
                 <button type="submit" class="btn btn-info pull-left" onclick="window.location.href='/action/add/'">
                     添加接口
                 </button>
@@ -42,7 +44,7 @@
                             <td>{{ info.params }}</td>
                             <td>{{ info.headers }}</td>
                             <td>{{ info.abandon_flag }}</td>
-                            <td><input type="button" value="查看" class="btn btn-block btn-info btn-xs" id="{{ info.id }}"
+                            <td><input type="button" value="修改" class="btn btn-block btn-info btn-xs" id="{{ info.id }}"
                                        onclick="updateApi(this.id)"></td>
                         </tr>
                     {% endfor %}
@@ -61,14 +63,15 @@
     <script>
         //配置取消按钮
         function resertEditTd() {
+            //刷新当前页面
             location.reload();
         }
-
         //修改按钮
         function updateApi(id) {
-            var b = $('#api_info #' + id).parent();
-            var a = b.siblings();
+            var b = $('#api_info #' + id).parent();//通过input找td
+            var a = b.siblings();//通过一个td，找他所有同级的td
             if (a[1].children.length === 0) {
+                //修改html的内容
                 a[1].innerHTML = "<input type='text' value='" + a[1].innerText + "'/>";
             }
             if (a[2].children.length === 0) {
@@ -102,17 +105,18 @@
                 headers: headers,
                 status:status
             };
-            alert(json);
+            alert(json);//通过弹窗，把获取到的信息，打印出来
+            console.log(json);//输出到前端控制台
             keep_apiinfo(json);
             location.reload();
         }
 
-        function keep_apiinfo() {
+        function keep_apiinfo(json) {
             $.ajax({
-                url: '/action/updata_api/',
-                data: json,
-                cache: false,
-                async: true,
+                url: '/action/updata_api/',//请求发送地址
+                data: json,//请求数据
+                cache: false,//缓存，默认false，不缓存此页面
+                async: true,//设置接口请求方式。true，异步接口，false，同步接口
                 type: "POST",
                 dataType: 'json',
                 success: function (json) {
@@ -127,6 +131,5 @@
                 }
             });
         }
-
     </script>
 {% endblock %}

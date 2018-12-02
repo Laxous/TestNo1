@@ -110,11 +110,11 @@
     <script>
 
         function getapiparams() {
-            var tb = document.getElementById("params_table");    //获取table对像
-            var rows = tb.rows;
+            var tb = document.getElementById("params_table");//获取table对像
+            var rows = tb.rows;//获取行数
             var cellArr = {};
             for (var i = 1; i < rows.length; i++) {    //--循环所有的行
-                var cells = rows[i].cells;
+                var cells = rows[i].cells;//获取列数
                 var key = cells[0].getElementsByTagName("input")[0].value;
                 var value = cells[1].getElementsByTagName("input")[0].value;
                 cellArr[key] = value;

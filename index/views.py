@@ -47,7 +47,9 @@ def signin(request):
 def action_index(request):
 	"""接口列表"""
 	info = {
-		'action_list':ActionApi.objects.all()
+		'action_list':ActionApi.objects.all(),
+		'username':request.user.username,
+		'name':request.user.first_name + request.user.last_name
 	}
 	return render(request, "action_api/action_index.html", info)
 
