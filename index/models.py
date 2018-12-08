@@ -35,7 +35,7 @@ class ActionApi(models.Model):
 	abandon_flag = models.IntegerField(default=1) # 1有效 0删除
 	created_at = models.DateTimeField(auto_now_add=True)
 	updated_at = models.DateTimeField(auto_now=True)
-	created_by = models.CharField(max_length=20)
-	updated_by = models.CharField(max_length=20)
-	descriptions = models.TextField(max_length=200)
+	created_by = models.CharField(max_length=20,null=True)
+	updated_by = models.CharField(max_length=20,null=True)
+	descriptions = models.TextField(max_length=200,null=True)
 
