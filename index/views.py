@@ -6,6 +6,7 @@ from django.contrib import auth
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import *
 from django.views.decorators.csrf import csrf_exempt
+from index.form import *
 import logging
 # Create your views here.
 logger = logging.getLogger('index.app')
@@ -21,9 +22,11 @@ def tests(request):
 	info={"title":"首页"}
 	list =[{'name':'空空','age':18},{'name':'咸鱼','age':20}]
 	logger.info('获取列表信息'+str(list))   # info打的日志，内容，都是字符串类型。
-	a=userinfo.objects.all()
+	a = userinfo.objects.all()
 	info['iiii']=a
 	info['infolist']=list
+	# casetype = CaseTypeForm()  locals()
+	info['casetype'] = CaseTypeForm()
 	return render(request, 'index.html',info,status=200)
 
 def login_index(request):

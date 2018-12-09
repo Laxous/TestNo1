@@ -1,0 +1,240 @@
+2018-12-08 11:46:51,077 [Dummy-1:123145536663552] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-12-08 11:46:51,109 [Dummy-1:123145536663552] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-08 11:46:51,139 [Dummy-1:123145536663552] [django.db.backends] [utils:execute:111] [DEBUG]- (0.029) SELECT VERSION(); args=None
+2018-12-08 11:46:51,382 [Dummy-1:123145536663552] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-08 11:46:51,414 [Dummy-1:123145536663552] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SHOW FULL TABLES; args=None
+2018-12-08 11:46:51,452 [Dummy-1:123145536663552] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-12-08 11:48:32,171 [Thread-2:123145541918720] [django.server] [basehttp:log_message:124] [INFO]- "GET /login HTTP/1.1" 301 0
+2018-12-08 11:48:32,226 [Thread-3:123145541918720] [django.template] [base:_resolve_lookup:878] [DEBUG]- Exception while resolving variable 'tips' in template 'login.html'.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tips'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'tips'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tips'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [tips] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'Zp3b7ACqmDUIhaoUYjXLpP8cxTK5YrMHmYu5BRmBsMmQ7A6ffapGwIPW5QAO2okb'>, 'request': <WSGIRequest: GET '/login/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x105c196a8>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x105d780f0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x105d4f518>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}]
+2018-12-08 11:48:32,233 [Thread-3:123145541918720] [django.server] [basehttp:log_message:124] [INFO]- "GET /login/ HTTP/1.1" 200 2883
+2018-12-08 11:48:32,595 [Thread-4:123145541918720] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-12-08 11:48:32,606 [Thread-5:123145547173888] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/iCheck/icheck.min.js HTTP/1.1" 200 4516
+2018-12-08 11:48:32,608 [Thread-6:123145541918720] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/iCheck/square/blue.css HTTP/1.1" 200 1611
+2018-12-08 11:48:32,641 [Thread-7:123145541918720] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-12-08 11:48:32,967 [Thread-8:123145541918720] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/bootstrap/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+2018-12-08 11:48:33,491 [Thread-9:123145541918720] [django.template] [base:_resolve_lookup:878] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/urls/resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern 'index/'>], [<URLPattern 'test/'>], [<URLPattern 'login/'>], [<URLPattern 'signin/'>], [<URLPattern 'action/'>], [<URLPattern 'action/add/'>], [<URLPattern 'action/send_api/'>], [<URLPattern 'action/updata_api/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+2018-12-08 11:48:33,511 [Thread-9:123145541918720] [django.server] [basehttp:log_message:124] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2849
+2018-12-08 11:48:42,102 [Thread-10:123145541918720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-12-08 11:48:42,142 [Thread-10:123145541918720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-08 11:48:42,173 [Thread-10:123145541918720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SELECT VERSION(); args=None
+2018-12-08 11:48:42,369 [Thread-10:123145541918720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.033) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-08 11:48:42,402 [Thread-10:123145541918720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.033) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`username` = 'admin'; args=('admin',)
+2018-12-08 11:48:42,440 [Thread-10:123145541918720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.035) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`username` = 'admin'; args=('admin',)
+2018-12-08 11:48:42,689 [Thread-10:123145541918720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.039) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2018-12-08 11:48:42.648526' AND `django_session`.`session_key` = 'f2tzftbfq9nbg5a50oh66qjxz0t4qguw'); args=('2018-12-08 11:48:42.648526', 'f2tzftbfq9nbg5a50oh66qjxz0t4qguw')
+2018-12-08 11:48:42,725 [Thread-10:123145541918720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.033) SELECT (1) AS `a` FROM `django_session` WHERE `django_session`.`session_key` = '3eimixtr57p5q0ofipcytdagy7lgigqj' LIMIT 1; args=('3eimixtr57p5q0ofipcytdagy7lgigqj',)
+2018-12-08 11:48:42,838 [Thread-10:123145541918720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.033) INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES ('3eimixtr57p5q0ofipcytdagy7lgigqj', 'ZWQwOTIwNTVkZjIyNjliODc3NTg4M2FiODA0YmE5NGNlYjdkNTliYjp7fQ==', '2018-12-22 11:48:42.770752'); args=('3eimixtr57p5q0ofipcytdagy7lgigqj', 'ZWQwOTIwNTVkZjIyNjliODc3NTg4M2FiODA0YmE5NGNlYjdkNTliYjp7fQ==', '2018-12-22 11:48:42.770752')
+2018-12-08 11:48:42,984 [Thread-10:123145541918720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.033) UPDATE `auth_user` SET `last_login` = '2018-12-08 11:48:42.919279' WHERE `auth_user`.`id` = 1; args=('2018-12-08 11:48:42.919279', 1)
+2018-12-08 11:48:43,118 [Thread-10:123145541918720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.033) UPDATE `django_session` SET `session_data` = 'OTEzMTllMTkxZGQyZWM4MjVlMjgwZWZlNjJmYTVlOTI3NjEyMmExZjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI3MGQ3YWQ0YjY4ZmJlZDJjNzNkNTc0Zjk2YmRjMWI1YWJiNzVhMTM4In0=', `expire_date` = '2018-12-22 11:48:43.053222' WHERE `django_session`.`session_key` = '3eimixtr57p5q0ofipcytdagy7lgigqj'; args=('OTEzMTllMTkxZGQyZWM4MjVlMjgwZWZlNjJmYTVlOTI3NjEyMmExZjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI3MGQ3YWQ0YjY4ZmJlZDJjNzNkNTc0Zjk2YmRjMWI1YWJiNzVhMTM4In0=', '2018-12-22 11:48:43.053222', '3eimixtr57p5q0ofipcytdagy7lgigqj')
+2018-12-08 11:48:43,189 [Thread-10:123145541918720] [django.server] [basehttp:log_message:124] [INFO]- "POST /signin/ HTTP/1.1" 302 27
+2018-12-08 11:48:43,379 [Thread-11:123145541918720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-12-08 11:48:43,409 [Thread-11:123145541918720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.029) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-08 11:48:43,439 [Thread-11:123145541918720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SELECT VERSION(); args=None
+2018-12-08 11:48:43,618 [Thread-11:123145541918720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-08 11:48:43,650 [Thread-11:123145541918720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2018-12-08 11:48:43.196989' AND `django_session`.`session_key` = '3eimixtr57p5q0ofipcytdagy7lgigqj'); args=('2018-12-08 11:48:43.196989', '3eimixtr57p5q0ofipcytdagy7lgigqj')
+2018-12-08 11:48:43,702 [Thread-11:123145541918720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-12-08 11:48:43,919 [Thread-11:123145541918720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.034) SELECT `index_userinfo`.`id`, `index_userinfo`.`name`, `index_userinfo`.`moblie_no`, `index_userinfo`.`address`, `index_userinfo`.`created_at`, `index_userinfo`.`updated_at`, `index_userinfo`.`des`, `index_userinfo`.`abanding_flag` FROM `index_userinfo` LIMIT 21; args=()
+2018-12-08 11:48:43,880 [Thread-11:123145541918720] [django.template] [base:_resolve_lookup:878] [DEBUG]- Exception while resolving variable 'username' in template 'index.html'.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [username] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x105dd3730>>, 'request': <WSGIRequest: GET '/test/'>, 'user': <SimpleLazyObject: <User: admin>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x105db8898>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x105db80b8>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'title': '首页', 'iiii': <QuerySet [<userinfo: userinfo object (1)>, <userinfo: userinfo object (2)>, <userinfo: userinfo object (3)>]>, 'infolist': [{'name': '空空', 'age': 18}, {'name': '咸鱼', 'age': 20}]}, {}]
+2018-12-08 11:48:43,958 [Thread-11:123145541918720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `index_userinfo`.`id`, `index_userinfo`.`name`, `index_userinfo`.`moblie_no`, `index_userinfo`.`address`, `index_userinfo`.`created_at`, `index_userinfo`.`updated_at`, `index_userinfo`.`des`, `index_userinfo`.`abanding_flag` FROM `index_userinfo`; args=()
+2018-12-08 11:48:43,975 [Thread-11:123145541918720] [django.server] [basehttp:log_message:124] [INFO]- "GET /test/ HTTP/1.1" 200 19143
+2018-12-08 11:48:44,109 [Thread-12:123145541918720] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/daterangepicker/daterangepicker.js HTTP/1.1" 200 64795
+2018-12-08 11:48:44,215 [Thread-13:123145541918720] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/js/pages/dashboard.js HTTP/1.1" 200 5635
+2018-12-08 11:48:44,216 [Thread-14:123145547173888] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/js/demo.js HTTP/1.1" 200 17319
+2018-12-08 11:48:44,459 [Thread-15:123145552429056] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/img/user2-160x160.jpg HTTP/1.1" 200 7070
+2018-12-08 11:59:05,739 [Dummy-1:123145403166720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-12-08 11:59:05,772 [Dummy-1:123145403166720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-08 11:59:05,805 [Dummy-1:123145403166720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT VERSION(); args=None
+2018-12-08 11:59:06,057 [Dummy-1:123145403166720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-08 11:59:06,088 [Dummy-1:123145403166720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SHOW FULL TABLES; args=None
+2018-12-08 11:59:06,126 [Dummy-1:123145403166720] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-12-08 11:59:12,358 [Thread-2:123145408421888] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-12-08 11:59:12,390 [Thread-2:123145408421888] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-08 11:59:12,427 [Thread-2:123145408421888] [django.db.backends] [utils:execute:111] [DEBUG]- (0.035) SELECT VERSION(); args=None
+2018-12-08 11:59:12,609 [Thread-2:123145408421888] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-08 11:59:12,642 [Thread-2:123145408421888] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2018-12-08 11:59:12.154366' AND `django_session`.`session_key` = '3eimixtr57p5q0ofipcytdagy7lgigqj'); args=('2018-12-08 11:59:12.154366', '3eimixtr57p5q0ofipcytdagy7lgigqj')
+2018-12-08 11:59:12,677 [Thread-2:123145408421888] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-12-08 11:59:12,761 [Thread-2:123145408421888] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `index_userinfo`.`id`, `index_userinfo`.`name`, `index_userinfo`.`moblie_no`, `index_userinfo`.`address`, `index_userinfo`.`created_at`, `index_userinfo`.`updated_at`, `index_userinfo`.`des`, `index_userinfo`.`abanding_flag` FROM `index_userinfo` LIMIT 21; args=()
+2018-12-08 11:59:12,725 [Thread-2:123145408421888] [django.template] [base:_resolve_lookup:878] [DEBUG]- Exception while resolving variable 'username' in template 'index.html'.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [username] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x107a46f28>>, 'request': <WSGIRequest: GET '/test/'>, 'user': <SimpleLazyObject: <User: admin>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x107a8d748>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x107a3fe80>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'title': '首页', 'iiii': <QuerySet [<userinfo: userinfo object (1)>, <userinfo: userinfo object (2)>, <userinfo: userinfo object (3)>]>, 'infolist': [{'name': '空空', 'age': 18}, {'name': '咸鱼', 'age': 20}]}, {}]
+2018-12-08 11:59:12,797 [Thread-2:123145408421888] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT `index_userinfo`.`id`, `index_userinfo`.`name`, `index_userinfo`.`moblie_no`, `index_userinfo`.`address`, `index_userinfo`.`created_at`, `index_userinfo`.`updated_at`, `index_userinfo`.`des`, `index_userinfo`.`abanding_flag` FROM `index_userinfo`; args=()
+2018-12-08 11:59:12,811 [Thread-2:123145408421888] [django.server] [basehttp:log_message:124] [INFO]- "GET /test/ HTTP/1.1" 200 19206
+2018-12-08 11:59:24,524 [Thread-3:123145408421888] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 200 542194
+2018-12-08 11:59:30,207 [Thread-4:123145408421888] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-12-08 11:59:30,239 [Thread-4:123145408421888] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-08 11:59:30,269 [Thread-4:123145408421888] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SELECT VERSION(); args=None
+2018-12-08 11:59:30,458 [Thread-4:123145408421888] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-08 11:59:30,492 [Thread-4:123145408421888] [django.db.backends] [utils:execute:111] [DEBUG]- (0.033) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2018-12-08 11:59:30.028348' AND `django_session`.`session_key` = '3eimixtr57p5q0ofipcytdagy7lgigqj'); args=('2018-12-08 11:59:30.028348', '3eimixtr57p5q0ofipcytdagy7lgigqj')
+2018-12-08 11:59:30,530 [Thread-4:123145408421888] [django.db.backends] [utils:execute:111] [DEBUG]- (0.033) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-12-08 11:59:30,587 [Thread-4:123145408421888] [django.db.backends] [utils:execute:111] [DEBUG]- (0.033) SELECT `index_userinfo`.`id`, `index_userinfo`.`name`, `index_userinfo`.`moblie_no`, `index_userinfo`.`address`, `index_userinfo`.`created_at`, `index_userinfo`.`updated_at`, `index_userinfo`.`des`, `index_userinfo`.`abanding_flag` FROM `index_userinfo` LIMIT 21; args=()
+2018-12-08 11:59:30,552 [Thread-4:123145408421888] [django.template] [base:_resolve_lookup:878] [DEBUG]- Exception while resolving variable 'username' in template 'index.html'.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [username] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x107ac98c8>>, 'request': <WSGIRequest: GET '/test/'>, 'user': <SimpleLazyObject: <User: admin>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x107a8d390>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x107a839b0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'title': '首页', 'iiii': <QuerySet [<userinfo: userinfo object (1)>, <userinfo: userinfo object (2)>, <userinfo: userinfo object (3)>]>, 'infolist': [{'name': '空空', 'age': 18}, {'name': '咸鱼', 'age': 20}]}, {}]
+2018-12-08 11:59:30,625 [Thread-4:123145408421888] [django.db.backends] [utils:execute:111] [DEBUG]- (0.034) SELECT `index_userinfo`.`id`, `index_userinfo`.`name`, `index_userinfo`.`moblie_no`, `index_userinfo`.`address`, `index_userinfo`.`created_at`, `index_userinfo`.`updated_at`, `index_userinfo`.`des`, `index_userinfo`.`abanding_flag` FROM `index_userinfo`; args=()
+2018-12-08 11:59:30,631 [Thread-4:123145408421888] [django.server] [basehttp:log_message:124] [INFO]- "GET /test/ HTTP/1.1" 200 19206
+2018-12-08 11:59:30,902 [Thread-8:123145424187392] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/morris/morris.css HTTP/1.1" 200 428
+2018-12-08 11:59:30,902 [Thread-5:123145408421888] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/css/AdminLTE.min.css HTTP/1.1" 200 90391
+2018-12-08 11:59:31,026 [Thread-7:123145418932224] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/iCheck/flat/blue.css HTTP/1.1" 200 1428
+2018-12-08 11:59:31,027 [Thread-6:123145413677056] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/jvectormap/jquery-jvectormap-1.2.2.css HTTP/1.1" 200 826
+2018-12-08 11:59:31,029 [Thread-9:123145429442560] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/css/skins/_all-skins.min.css HTTP/1.1" 200 40757
+2018-12-08 11:59:31,030 [Thread-12:123145434697728] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/daterangepicker/daterangepicker.css HTTP/1.1" 200 6666
+2018-12-08 11:59:31,047 [Thread-11:123145424187392] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/datepicker/datepicker3.css HTTP/1.1" 200 33745
+2018-12-08 11:59:31,048 [Thread-10:123145408421888] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 121200
+2018-12-08 11:59:31,070 [Thread-13:123145408421888] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css HTTP/1.1" 200 2226
+2018-12-08 11:59:31,072 [Thread-14:123145413677056] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/jQuery/jquery-2.2.3.min.js HTTP/1.1" 200 85659
+2018-12-08 11:59:31,091 [Thread-16:123145413677056] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/morris/morris.min.js HTTP/1.1" 200 35652
+2018-12-08 11:59:31,097 [Thread-15:123145408421888] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 37045
+2018-12-08 11:59:31,107 [Thread-18:123145408421888] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/jvectormap/jquery-jvectormap-world-mill-en.js HTTP/1.1" 200 144313
+2018-12-08 11:59:31,115 [Thread-17:123145413677056] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/sparkline/jquery.sparkline.min.js HTTP/1.1" 200 43247
+2018-12-08 11:59:31,134 [Thread-20:123145413677056] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/knob/jquery.knob.js HTTP/1.1" 200 26222
+2018-12-08 11:59:31,178 [Thread-19:123145408421888] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/datepicker/bootstrap-datepicker.js HTTP/1.1" 200 46838
+2018-12-08 11:59:31,198 [Thread-23:123145424187392] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/fastclick/fastclick.js HTTP/1.1" 200 25965
+2018-12-08 11:59:31,205 [Thread-22:123145418932224] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js HTTP/1.1" 200 33323
+2018-12-08 11:59:31,251 [Thread-24:123145408421888] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/slimScroll/jquery.slimscroll.min.js HTTP/1.1" 200 4724
+2018-12-08 11:59:31,254 [Thread-25:123145418932224] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/js/app.min.js HTTP/1.1" 200 9924
+2018-12-08 11:59:31,256 [Thread-26:123145424187392] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/daterangepicker/daterangepicker.js HTTP/1.1" 200 64795
+2018-12-08 11:59:31,257 [Thread-27:123145429442560] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/js/pages/dashboard.js HTTP/1.1" 200 5635
+2018-12-08 11:59:31,258 [Thread-28:123145434697728] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/js/demo.js HTTP/1.1" 200 17319
+2018-12-08 11:59:31,260 [Thread-21:123145413677056] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js HTTP/1.1" 200 210932
+2018-12-08 11:59:31,277 [Thread-29:123145408421888] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/img/user2-160x160.jpg HTTP/1.1" 200 7070
+2018-12-08 11:59:31,399 [Thread-30:123145408421888] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 200 542194
+2018-12-08 11:59:42,720 [Thread-31:123145408421888] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/img/favicon.ico HTTP/1.1" 200 71597

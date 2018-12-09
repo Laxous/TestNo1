@@ -1,0 +1,213 @@
+2018-12-09 11:20:31,983 [MainThread:4350584256] [django.db.backends] [utils:execute:111] [DEBUG]- (0.033) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-12-09 11:20:32,016 [MainThread:4350584256] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-09 11:20:32,048 [MainThread:4350584256] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT VERSION(); args=None
+2018-12-09 11:20:32,350 [MainThread:4350584256] [django.db.backends] [utils:execute:111] [DEBUG]- (0.034) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-09 11:20:32,384 [MainThread:4350584256] [django.db.backends] [utils:execute:111] [DEBUG]- (0.034) SHOW FULL TABLES; args=None
+2018-12-09 11:20:32,433 [MainThread:4350584256] [django.db.backends] [utils:execute:111] [DEBUG]- (0.035) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-12-09 11:20:42,245 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-12-09 11:20:42,277 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-09 11:20:42,308 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SELECT @@sql_mode; args=None
+2018-12-09 11:20:42,339 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SELECT VERSION(); args=None
+2018-12-09 11:20:42,481 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SHOW FULL TABLES; args=None
+2018-12-09 11:20:42,522 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.033) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-12-09 11:20:42,559 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SHOW FULL TABLES; args=None
+2018-12-09 11:20:42,593 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.033) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-12-09 11:20:42,666 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SHOW FULL TABLES; args=None
+2018-12-09 11:20:42,671 [MainThread:4798707136] [django.db.backends.schema] [schema:execute:124] [DEBUG]- CREATE TABLE `index_casetype` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `type_name` varchar(50) NOT NULL, `abandon_flag` integer NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, `created_by` varchar(20) NULL, `updated_by` varchar(20) NULL, `descriptions` longtext NULL); (params None)
+2018-12-09 11:20:42,730 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.058) CREATE TABLE `index_casetype` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `type_name` varchar(50) NOT NULL, `abandon_flag` integer NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, `created_by` varchar(20) NULL, `updated_by` varchar(20) NULL, `descriptions` longtext NULL); args=None
+2018-12-09 11:20:42,763 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT engine FROM information_schema.tables WHERE table_name = 'index_casetype'; args=['index_casetype']
+2018-12-09 11:20:42,795 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT engine FROM information_schema.tables WHERE table_name = 'index_casetype'; args=['index_casetype']
+2018-12-09 11:20:42,827 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT engine FROM information_schema.tables WHERE table_name = 'index_casetype'; args=['index_casetype']
+2018-12-09 11:20:42,859 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT engine FROM information_schema.tables WHERE table_name = 'index_casetype'; args=['index_casetype']
+2018-12-09 11:20:42,893 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.033) SELECT engine FROM information_schema.tables WHERE table_name = 'index_casetype'; args=['index_casetype']
+2018-12-09 11:20:42,927 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT engine FROM information_schema.tables WHERE table_name = 'index_casetype'; args=['index_casetype']
+2018-12-09 11:20:42,959 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT engine FROM information_schema.tables WHERE table_name = 'index_casetype'; args=['index_casetype']
+2018-12-09 11:20:42,991 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT engine FROM information_schema.tables WHERE table_name = 'index_casetype'; args=['index_casetype']
+2018-12-09 11:20:43,023 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SHOW FULL TABLES; args=None
+2018-12-09 11:20:43,086 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('index', '0006_casetype', '2018-12-09 11:20:43.024647'); args=['index', '0006_casetype', '2018-12-09 11:20:43.024647']
+2018-12-09 11:20:43,184 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SHOW FULL TABLES; args=None
+2018-12-09 11:20:43,218 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-12-09 11:20:43,255 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'admin' AND `django_content_type`.`model` = 'logentry'); args=('admin', 'logentry')
+2018-12-09 11:20:43,289 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (1) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(1,)
+2018-12-09 11:20:43,323 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',)
+2018-12-09 11:20:43,356 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'permission'); args=('auth', 'permission')
+2018-12-09 11:20:43,391 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'group'); args=('auth', 'group')
+2018-12-09 11:20:43,424 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'auth' AND `django_content_type`.`model` = 'user'); args=('auth', 'user')
+2018-12-09 11:20:43,460 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (2, 3, 4) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(2, 3, 4)
+2018-12-09 11:20:43,493 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',)
+2018-12-09 11:20:43,527 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'contenttypes' AND `django_content_type`.`model` = 'contenttype'); args=('contenttypes', 'contenttype')
+2018-12-09 11:20:43,563 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (5) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(5,)
+2018-12-09 11:20:43,597 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',)
+2018-12-09 11:20:43,631 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'sessions' AND `django_content_type`.`model` = 'session'); args=('sessions', 'session')
+2018-12-09 11:20:43,665 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (6) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(6,)
+2018-12-09 11:20:43,698 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',)
+2018-12-09 11:20:43,732 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'index' AND `django_content_type`.`model` = 'userinfo'); args=('index', 'userinfo')
+2018-12-09 11:20:43,764 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'index' AND `django_content_type`.`model` = 'actionapi'); args=('index', 'actionapi')
+2018-12-09 11:20:43,797 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'index' AND `django_content_type`.`model` = 'casetype'); args=('index', 'casetype')
+2018-12-09 11:20:43,833 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`app_label` = 'index' AND `django_content_type`.`model` = 'casetype'); args=('index', 'casetype')
+2018-12-09 11:20:43,895 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('index', 'casetype'); args=['index', 'casetype']
+2018-12-09 11:20:43,995 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (8, 9, 7) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(8, 9, 7)
+2018-12-09 11:20:44,061 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) INSERT INTO `auth_permission` (`name`, `content_type_id`, `codename`) VALUES ('Can add case type', 9, 'add_casetype'), ('Can change case type', 9, 'change_casetype'), ('Can delete case type', 9, 'delete_casetype'); args=('Can add case type', 9, 'add_casetype', 'Can change case type', 9, 'change_casetype', 'Can delete case type', 9, 'delete_casetype')
+2018-12-09 11:20:44,160 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'index'; args=('index',)
+2018-12-09 11:20:44,195 [MainThread:4798707136] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'bootstrap3'; args=('bootstrap3',)
+2018-12-09 11:26:04,347 [MainThread:4634576320] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-12-09 11:26:04,386 [MainThread:4634576320] [django.db.backends] [utils:execute:111] [DEBUG]- (0.035) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-09 11:26:04,463 [MainThread:4634576320] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SELECT VERSION(); args=None
+2018-12-09 11:26:04,494 [MainThread:4634576320] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) INSERT INTO `index_casetype` (`type_name`, `abandon_flag`, `created_at`, `updated_at`, `created_by`, `updated_by`, `descriptions`) VALUES ('接口测试', 1, '2018-12-09 11:26:04.431307', '2018-12-09 11:26:04.463949', NULL, NULL, NULL); args=['接口测试', 1, '2018-12-09 11:26:04.431307', '2018-12-09 11:26:04.463949', None, None, None]
+2018-12-09 11:26:32,613 [MainThread:4634576320] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) INSERT INTO `index_casetype` (`type_name`, `abandon_flag`, `created_at`, `updated_at`, `created_by`, `updated_by`, `descriptions`) VALUES ('requests', 1, '2018-12-09 11:26:32.582615', '2018-12-09 11:26:32.582716', NULL, NULL, NULL); args=['requests', 1, '2018-12-09 11:26:32.582615', '2018-12-09 11:26:32.582716', None, None, None]
+2018-12-09 11:27:03,262 [MainThread:4634576320] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) UPDATE `index_casetype` SET `type_name` = 'action', `abandon_flag` = 1, `created_at` = '2018-12-09 11:26:32.582615', `updated_at` = '2018-12-09 11:27:03.227450', `created_by` = NULL, `updated_by` = NULL, `descriptions` = NULL WHERE `index_casetype`.`id` = 1; args=('action', 1, '2018-12-09 11:26:32.582615', '2018-12-09 11:27:03.227450', 1)
+2018-12-09 11:27:09,681 [MainThread:4634576320] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) UPDATE `index_casetype` SET `type_name` = 'dubbo', `abandon_flag` = 1, `created_at` = '2018-12-09 11:26:32.582615', `updated_at` = '2018-12-09 11:27:09.650164', `created_by` = NULL, `updated_by` = NULL, `descriptions` = NULL WHERE `index_casetype`.`id` = 1; args=('dubbo', 1, '2018-12-09 11:26:32.582615', '2018-12-09 11:27:09.650164', 1)
+2018-12-09 11:27:14,704 [MainThread:4634576320] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) UPDATE `index_casetype` SET `type_name` = 'http', `abandon_flag` = 1, `created_at` = '2018-12-09 11:26:32.582615', `updated_at` = '2018-12-09 11:27:14.673782', `created_by` = NULL, `updated_by` = NULL, `descriptions` = NULL WHERE `index_casetype`.`id` = 1; args=('http', 1, '2018-12-09 11:26:32.582615', '2018-12-09 11:27:14.673782', 1)
+2018-12-09 11:28:02,039 [MainThread:4634576320] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) INSERT INTO `index_casetype` (`type_name`, `abandon_flag`, `created_at`, `updated_at`, `created_by`, `updated_by`, `descriptions`) VALUES ('dubbo', 1, '2018-12-09 11:28:02.008152', '2018-12-09 11:28:02.008229', NULL, NULL, NULL); args=['dubbo', 1, '2018-12-09 11:28:02.008152', '2018-12-09 11:28:02.008229', None, None, None]
+2018-12-09 11:28:36,824 [MainThread:4634576320] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) INSERT INTO `index_casetype` (`type_name`, `abandon_flag`, `created_at`, `updated_at`, `created_by`, `updated_by`, `descriptions`) VALUES ('action', 1, '2018-12-09 11:28:36.794150', '2018-12-09 11:28:36.794227', NULL, NULL, NULL); args=['action', 1, '2018-12-09 11:28:36.794150', '2018-12-09 11:28:36.794227', None, None, None]
+2018-12-09 11:40:28,729 [Dummy-1:123145426337792] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-12-09 11:40:28,763 [Dummy-1:123145426337792] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-09 11:40:28,802 [Dummy-1:123145426337792] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `index_casetype`.`type_name` FROM `index_casetype`; args=()
+2018-12-09 11:42:10,327 [Dummy-1:123145309913088] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-12-09 11:42:10,357 [Dummy-1:123145309913088] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-09 11:42:10,388 [Dummy-1:123145309913088] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SELECT `index_casetype`.`type_name` FROM `index_casetype`; args=()
+2018-12-09 11:42:10,431 [Dummy-1:123145309913088] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SELECT VERSION(); args=None
+2018-12-09 11:42:10,512 [Dummy-1:123145309913088] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SHOW FULL TABLES; args=None
+2018-12-09 11:42:10,545 [Dummy-1:123145309913088] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-12-09 11:42:15,930 [Dummy-1:123145490251776] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-12-09 11:42:15,961 [Dummy-1:123145490251776] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-09 11:42:15,993 [Dummy-1:123145490251776] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT `index_casetype`.`type_name` FROM `index_casetype`; args=()
+2018-12-09 11:42:16,059 [Dummy-1:123145490251776] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT VERSION(); args=None
+2018-12-09 11:42:16,149 [Dummy-1:123145490251776] [django.db.backends] [utils:execute:111] [DEBUG]- (0.038) SHOW FULL TABLES; args=None
+2018-12-09 11:42:16,183 [Dummy-1:123145490251776] [django.db.backends] [utils:execute:111] [DEBUG]- (0.033) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-12-09 11:42:44,280 [Thread-2:123145495506944] [django.server] [basehttp:log_message:124] [INFO]- "GET /login HTTP/1.1" 301 0
+2018-12-09 11:42:44,344 [Thread-3:123145495506944] [django.template] [base:_resolve_lookup:878] [DEBUG]- Exception while resolving variable 'tips' in template 'login.html'.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'tips'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'tips'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'tips'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [tips] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'uOEWbUvfDJI72dVBHurxSd1H5mrDJUwMKpoqpqSOvBBLInJANIZzPoL6aHERKZuz'>, 'request': <WSGIRequest: GET '/login/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x1101b1598>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x110288ef0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x110253a58>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}]
+2018-12-09 11:42:44,352 [Thread-3:123145495506944] [django.server] [basehttp:log_message:124] [INFO]- "GET /login/ HTTP/1.1" 200 2883
+2018-12-09 11:42:46,651 [Thread-5:123145500762112] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/iCheck/square/blue.css HTTP/1.1" 200 1611
+2018-12-09 11:42:46,652 [Thread-4:123145495506944] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/plugins/iCheck/icheck.min.js HTTP/1.1" 200 4516
+2018-12-09 11:42:46,882 [Thread-6:123145495506944] [django.server] [basehttp:log_message:124] [INFO]- "GET /static/bootstrap/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+2018-12-09 11:42:47,270 [Thread-7:123145495506944] [django.template] [base:_resolve_lookup:878] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/core/handlers/base.py", line 113, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/urls/resolvers.py", line 523, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern 'index/'>], [<URLPattern 'test/'>], [<URLPattern 'login/'>], [<URLPattern 'signin/'>], [<URLPattern 'action/'>], [<URLPattern 'action/add/'>], [<URLPattern 'action/send_api/'>], [<URLPattern 'action/updata_api/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 843, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+2018-12-09 11:42:47,278 [Thread-7:123145495506944] [django.server] [basehttp:log_message:124] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 2849
+2018-12-09 11:42:52,978 [Thread-8:123145495506944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-12-09 11:42:53,009 [Thread-8:123145495506944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-09 11:42:53,041 [Thread-8:123145495506944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT VERSION(); args=None
+2018-12-09 11:42:53,224 [Thread-8:123145495506944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-09 11:42:53,257 [Thread-8:123145495506944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`username` = 'admin'; args=('admin',)
+2018-12-09 11:42:53,292 [Thread-8:123145495506944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`username` = 'admin'; args=('admin',)
+2018-12-09 11:42:53,492 [Thread-8:123145495506944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.033) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2018-12-09 11:42:53.458184' AND `django_session`.`session_key` = '3eimixtr57p5q0ofipcytdagy7lgigqj'); args=('2018-12-09 11:42:53.458184', '3eimixtr57p5q0ofipcytdagy7lgigqj')
+2018-12-09 11:42:53,567 [Thread-8:123145495506944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) UPDATE `auth_user` SET `last_login` = '2018-12-09 11:42:53.502887' WHERE `auth_user`.`id` = 1; args=('2018-12-09 11:42:53.502887', 1)
+2018-12-09 11:42:53,697 [Thread-8:123145495506944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) UPDATE `django_session` SET `session_data` = 'OTEzMTllMTkxZGQyZWM4MjVlMjgwZWZlNjJmYTVlOTI3NjEyMmExZjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI3MGQ3YWQ0YjY4ZmJlZDJjNzNkNTc0Zjk2YmRjMWI1YWJiNzVhMTM4In0=', `expire_date` = '2018-12-23 11:42:53.634669' WHERE `django_session`.`session_key` = '3eimixtr57p5q0ofipcytdagy7lgigqj'; args=('OTEzMTllMTkxZGQyZWM4MjVlMjgwZWZlNjJmYTVlOTI3NjEyMmExZjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI3MGQ3YWQ0YjY4ZmJlZDJjNzNkNTc0Zjk2YmRjMWI1YWJiNzVhMTM4In0=', '2018-12-23 11:42:53.634669', '3eimixtr57p5q0ofipcytdagy7lgigqj')
+2018-12-09 11:42:53,763 [Thread-8:123145495506944] [django.server] [basehttp:log_message:124] [INFO]- "POST /signin/ HTTP/1.1" 302 27
+2018-12-09 11:42:53,960 [Thread-9:123145495506944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-12-09 11:42:53,991 [Thread-9:123145495506944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-09 11:42:54,023 [Thread-9:123145495506944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT VERSION(); args=None
+2018-12-09 11:42:54,207 [Thread-9:123145495506944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-09 11:42:54,238 [Thread-9:123145495506944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT `django_session`.`session_key`, `django_session`.`session_data`, `django_session`.`expire_date` FROM `django_session` WHERE (`django_session`.`expire_date` > '2018-12-09 11:42:53.772402' AND `django_session`.`session_key` = '3eimixtr57p5q0ofipcytdagy7lgigqj'); args=('2018-12-09 11:42:53.772402', '3eimixtr57p5q0ofipcytdagy7lgigqj')
+2018-12-09 11:42:54,273 [Thread-9:123145495506944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `auth_user`.`id`, `auth_user`.`password`, `auth_user`.`last_login`, `auth_user`.`is_superuser`, `auth_user`.`username`, `auth_user`.`first_name`, `auth_user`.`last_name`, `auth_user`.`email`, `auth_user`.`is_staff`, `auth_user`.`is_active`, `auth_user`.`date_joined` FROM `auth_user` WHERE `auth_user`.`id` = 1; args=(1,)
+2018-12-09 11:42:54,319 [Thread-9:123145495506944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SELECT `index_userinfo`.`id`, `index_userinfo`.`name`, `index_userinfo`.`moblie_no`, `index_userinfo`.`address`, `index_userinfo`.`created_at`, `index_userinfo`.`updated_at`, `index_userinfo`.`des`, `index_userinfo`.`abanding_flag` FROM `index_userinfo` LIMIT 21; args=()
+2018-12-09 11:42:54,288 [Thread-9:123145495506944] [django.template] [base:_resolve_lookup:878] [DEBUG]- Exception while resolving variable 'username' in template 'index.html'.
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 835, in _resolve_lookup
+    current = current[bit]
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 841, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 849, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 856, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [username] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x1102e3ae8>>, 'request': <WSGIRequest: GET '/test/'>, 'user': <SimpleLazyObject: <User: admin>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x1102cd978>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x1102d18d0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'title': '首页', 'iiii': <QuerySet [<userinfo: userinfo object (1)>, <userinfo: userinfo object (2)>, <userinfo: userinfo object (3)>]>, 'infolist': [{'name': '空空', 'age': 18}, {'name': '咸鱼', 'age': 20}], 'casetype': <CaseTypeForm bound=False, valid=Unknown, fields=(descriptions;type)>}, {}]
+2018-12-09 11:42:54,374 [Thread-9:123145495506944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT `index_userinfo`.`id`, `index_userinfo`.`name`, `index_userinfo`.`moblie_no`, `index_userinfo`.`address`, `index_userinfo`.`created_at`, `index_userinfo`.`updated_at`, `index_userinfo`.`des`, `index_userinfo`.`abanding_flag` FROM `index_userinfo`; args=()
+2018-12-09 11:42:54,387 [Thread-9:123145495506944] [django.server] [basehttp:log_message:124] [INFO]- "GET /test/ HTTP/1.1" 200 19872
+2018-12-09 11:46:34,131 [Dummy-1:123145318719488] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-12-09 11:46:34,162 [Dummy-1:123145318719488] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-09 11:46:34,194 [Dummy-1:123145318719488] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT `index_casetype`.`type_name` FROM `index_casetype`; args=()
+2018-12-09 11:46:34,234 [Dummy-1:123145318719488] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT VERSION(); args=None
+2018-12-09 11:46:34,317 [Dummy-1:123145318719488] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SHOW FULL TABLES; args=None
+2018-12-09 11:46:34,351 [Dummy-1:123145318719488] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-12-09 11:56:01,943 [Dummy-1:123145365348352] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-12-09 11:56:01,977 [Dummy-1:123145365348352] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-09 11:56:02,009 [Dummy-1:123145365348352] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT `index_casetype`.`type_name` FROM `index_casetype`; args=()
+2018-12-09 11:56:02,047 [Dummy-1:123145365348352] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT VERSION(); args=None
+2018-12-09 11:56:02,133 [Dummy-1:123145365348352] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SHOW FULL TABLES; args=None
+2018-12-09 11:56:02,168 [Dummy-1:123145365348352] [django.db.backends] [utils:execute:111] [DEBUG]- (0.034) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2018-12-09 12:00:05,142 [Dummy-1:123145445330944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.032) SELECT @@SQL_AUTO_IS_NULL; args=None
+2018-12-09 12:00:05,173 [Dummy-1:123145445330944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED; args=None
+2018-12-09 12:00:05,204 [Dummy-1:123145445330944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.030) SELECT `index_casetype`.`type_name` FROM `index_casetype`; args=()
+2018-12-09 12:00:05,250 [Dummy-1:123145445330944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.031) SELECT VERSION(); args=None
+2018-12-09 12:00:05,343 [Dummy-1:123145445330944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.033) SHOW FULL TABLES; args=None
+2018-12-09 12:00:05,378 [Dummy-1:123145445330944] [django.db.backends] [utils:execute:111] [DEBUG]- (0.034) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()

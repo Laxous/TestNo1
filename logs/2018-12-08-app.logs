@@ -1,0 +1,11 @@
+2018-12-08 11:48:32,203 [Thread-3:123145541918720] [index.app] [views:login_index:30] [INFO]- 进入登录页面
+2018-12-08 11:48:41,908 [Thread-10:123145541918720] [index.app] [views:signin:38] [INFO]- 登录用户名：admin
+2018-12-08 11:48:41,909 [Thread-10:123145541918720] [index.app] [views:signin:39] [INFO]- 登录密码：admin123
+2018-12-08 11:48:42,404 [Thread-10:123145541918720] [index.app] [views:signin:41] [INFO]- 用户已注册，开始登录
+2018-12-08 11:48:43,052 [Thread-10:123145541918720] [index.app] [views:signin:46] [INFO]- 登录成功，跳转主页
+2018-12-08 11:48:43,703 [Thread-11:123145541918720] [index.app] [views:tests:20] [INFO]- 进入首页
+2018-12-08 11:48:43,704 [Thread-11:123145541918720] [index.app] [views:tests:23] [INFO]- 获取列表信息[{'name': '空空', 'age': 18}, {'name': '咸鱼', 'age': 20}]
+2018-12-08 11:59:12,680 [Thread-2:123145408421888] [index.app] [views:tests:20] [INFO]- 进入首页
+2018-12-08 11:59:12,688 [Thread-2:123145408421888] [index.app] [views:tests:23] [INFO]- 获取列表信息[{'name': '空空', 'age': 18}, {'name': '咸鱼', 'age': 20}]
+2018-12-08 11:59:30,531 [Thread-4:123145408421888] [index.app] [views:tests:20] [INFO]- 进入首页
+2018-12-08 11:59:30,534 [Thread-4:123145408421888] [index.app] [views:tests:23] [INFO]- 获取列表信息[{'name': '空空', 'age': 18}, {'name': '咸鱼', 'age': 20}]

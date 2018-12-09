@@ -39,3 +39,13 @@ class ActionApi(models.Model):
 	updated_by = models.CharField(max_length=20,null=True)
 	descriptions = models.TextField(max_length=200,null=True)
 
+class CaseType(models.Model):
+	"""用例类型"""
+	id = models.AutoField(primary_key=True)
+	type_name = models.CharField(max_length=50)
+	abandon_flag = models.IntegerField(default=1)  # 1有效 0删除
+	created_at = models.DateTimeField(auto_now_add=True)
+	updated_at = models.DateTimeField(auto_now=True)
+	created_by = models.CharField(max_length=20, null=True)
+	updated_by = models.CharField(max_length=20, null=True)
+	descriptions = models.TextField(max_length=200, null=True)
